@@ -1,15 +1,29 @@
 /**:
   ros__parameters:
     launch_stop_line: true
-    launch_crosswalk: true
-    launch_traffic_light: true
-    launch_intersection: true
-    launch_blind_spot: true
+
+    # launch_crosswalk: true
+    # launch_traffic_light: true
+    # launch_intersection: true
+    # launch_blind_spot: true
+
+    launch_crosswalk: false # TODO: change to "true" as soon as rule-based perception is introduced in X1.
+    launch_traffic_light: false # There are no plans to install a camera in X1.
+    launch_intersection: false # TODO: change to "true" as soon as rule-based perception is introduced in X1.
+    launch_blind_spot: false # TODO: change to "true" as soon as rule-based perception is introduced in X1.
+
     launch_detection_area: true
-    launch_virtual_traffic_light: false # disabled by default to not confuse newcomers
-    launch_occlusion_spot: false
-    launch_no_stopping_area: true
-    launch_run_out: false
+
+    # launch_virtual_traffic_light: false # disabled by default to not confuse newcomers
+    # launch_occlusion_spot: false
+    # launch_no_stopping_area: true
+    # launch_run_out: false
+
+    launch_virtual_traffic_light: true
+    launch_occlusion_spot: false # TODO: change to "true" as soon as the verification on the vehicle is completed in X1.
+    launch_no_stopping_area: false # TODO: change to "true" as soon as the verification on the vehicle is completed in X1.
+    launch_run_out: false # TODO: change to "true" as soon as rule-based perception is introduced in X1.
+
     launch_speed_bump: false
     forward_path_length: 1000.0
     backward_path_length: 5.0

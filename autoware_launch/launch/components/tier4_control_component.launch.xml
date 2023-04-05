@@ -9,6 +9,9 @@
   <let name="latlon_controller_param_path_dir" value="$(var vehicle_id)" if="$(var use_individual_control_param)"/>
   <let name="latlon_controller_param_path_dir" value="" unless="$(var use_individual_control_param)"/>
 
+  <!-- Additional arg in X1 -->
+  <arg name="use_start_request" default="true"/>
+
   <include file="$(find-pkg-share tier4_control_launch)/launch/control.launch.py">
     <!-- option -->
     <arg name="vehicle_param_file" value="$(find-pkg-share $(var vehicle_model)_description)/config/vehicle_info.param.yaml"/>

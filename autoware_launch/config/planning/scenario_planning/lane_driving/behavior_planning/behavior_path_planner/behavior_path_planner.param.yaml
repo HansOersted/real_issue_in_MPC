@@ -9,10 +9,10 @@
     backward_length_buffer_for_end_of_pull_out: 5.0
     minimum_pull_over_length: 16.0
 
-    refine_goal_search_radius_range: 7.5
+    refine_goal_search_radius_range: 3.0 # Since the X1-RD-vehicle drives indoors, it is necessary to be able to make small turns even near the destination.
 
     # parameters for turn signal decider
-    turn_signal_intersection_search_distance: 30.0
+    turn_signal_intersection_search_distance: 15.0 # This change is due to the X1-RD-vehicle driving very slowly on private property.
     turn_signal_intersection_angle_threshold_deg: 15.0
     turn_signal_minimum_search_distance: 10.0
     turn_signal_search_time: 3.0
@@ -28,14 +28,14 @@
     lateral_distance_max_threshold: 2.0
     longitudinal_distance_min_threshold: 3.0
 
-    expected_front_deceleration: -1.0
+    expected_front_deceleration: -0.5
     expected_rear_deceleration: -1.0
 
-    expected_front_deceleration_for_abort: -1.0
-    expected_rear_deceleration_for_abort: -2.0
+    expected_front_deceleration_for_abort: -2.0
+    expected_rear_deceleration_for_abort: -2.5
 
     rear_vehicle_reaction_time: 2.0
-    rear_vehicle_safety_time_margin: 1.0
+    rear_vehicle_safety_time_margin: 2.0
 
     # USE ONLY WHEN THE OPTION COMPILE_WITH_OLD_ARCHITECTURE IS SET TO FALSE.
     # https://github.com/autowarefoundation/autoware.universe/blob/main/planning/behavior_path_planner/CMakeLists.txt

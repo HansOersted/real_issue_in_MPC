@@ -19,4 +19,4 @@
     drivable_area_height: 50.0
     static_obstacle_velocity_thresh: 1.5
     maximum_deceleration: 1.0
-    refine_goal_search_radius_range: 7.5
+    refine_goal_search_radius_range: 3.0
