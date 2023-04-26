@@ -15,14 +15,14 @@
     stop_planner:
       # params for stop position
       stop_position:
-        max_longitudinal_margin: 5.0             # stop margin distance from obstacle on the path [m]
+        max_longitudinal_margin: 3.0             # stop margin distance from obstacle on the path [m]
         max_longitudinal_margin_behind_goal: 3.0 # stop margin distance from obstacle behind goal on the path [m]
-        min_longitudinal_margin: 5.0             # stop margin distance when any other stop point is inserted in stop margin [m]
+        min_longitudinal_margin: 3.0             # stop margin distance when any other stop point is inserted in stop margin [m]
         hold_stop_margin_distance: 0.0           # the ego keeps stopping if the ego is in this margin [m]
 
       # params for detection area
       detection_area:
-        lateral_margin: 0.0                  # margin [m]
+        lateral_margin: 0.2                  # margin [m]
         vehicle_lateral_margin: 0.0          # margin of vehicle footprint [m]
         pedestrian_lateral_margin: 0.0       # margin of pedestrian footprint [m]
         unknown_lateral_margin: 0.0          # margin of unknown footprint [m]
@@ -47,9 +47,9 @@
 
       # params for velocity
       target_velocity:
-        max_slow_down_velocity: 1.38         # max slow down velocity (use this param if consider_constraints is False)[m/s]
-        min_slow_down_velocity: 0.28         # min slow down velocity (use this param if consider_constraints is False)[m/s]
-        slow_down_velocity: 1.38             # target slow down velocity (use this param if consider_constraints is True)[m/s]
+        max_slow_down_velocity: 0.84         # max slow down velocity (use this param if consider_constraints is False)[m/s]
+        min_slow_down_velocity: 0.84         # min slow down velocity (use this param if consider_constraints is False)[m/s]
+        slow_down_velocity: 0.84             # target slow down velocity (use this param if consider_constraints is True)[m/s]
 
       # params for deceleration constraints (use this param if consider_constraints is True)
       constraints:

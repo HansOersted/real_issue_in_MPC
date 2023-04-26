@@ -43,3 +43,6 @@
 
     merge_from_private:
       stop_duration_sec: 1.0
+    merge_from_private:
+      merge_from_private_area:
+        stop_duration_sec: 1.0
