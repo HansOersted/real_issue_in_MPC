@@ -17,7 +17,7 @@
 
     common:
       # output
-      output_delta_arc_length: 0.5     #  delta arc length for output trajectory [m]
+      output_delta_arc_length: 0.1     #  delta arc length for output trajectory [m]
       output_backward_traj_length: 5.0  # backward length for backward trajectory from base_link [m]
 
     # replanning & trimming trajectory param outside algorithm
@@ -43,7 +43,7 @@
       clearance:
         num_joint_points: 3  # number of joint points (joint means connecting fixing and smoothing)
 
-        clearance_for_fix: 0.0     # maximum optimizing range when applying fixing
+        clearance_for_fix: 0.05     # maximum optimizing range when applying fixing
         clearance_for_joint: 0.1   # maximum optimizing range when applying jointing
         clearance_for_smooth: 0.1  # maximum optimizing range when applying smoothing
 
