@@ -375,6 +375,8 @@ Visualization Manager:
             traffic_light_id: false
             traffic_light_triangle: true
             walkway_lanelets: true
+            hatched_road_markings_bound: true
+            hatched_road_markings_area: false
           Topic:
             Depth: 5
             Durability Policy: Transient Local
@@ -1895,6 +1897,18 @@ Visualization Manager:
                             Reliability Policy: Reliable
                             Value: /planning/scenario_planning/lane_driving/behavior_planning/behavior_velocity_planner/debug/out_of_lane
                           Value: false
+                        - Class: rviz_default_plugins/MarkerArray
+                          Enabled: false
+                          Name: DynamicAvoidance
+                          Namespaces:
+                            {}
+                          Topic:
+                            Depth: 5
+                            Durability Policy: Volatile
+                            History Policy: Keep Last
+                            Reliability Policy: Reliable
+                            Value: /planning/scenario_planning/lane_driving/behavior_planning/behavior_path_planner/debug/dynamic_avoidance
+                          Value: false
                       Enabled: false
                       Name: DebugMarker
                     - Class: rviz_common/Group
@@ -1999,6 +2013,18 @@ Visualization Manager:
                             History Policy: Keep Last
                             Reliability Policy: Reliable
                             Value: /planning/scenario_planning/lane_driving/behavior_planning/behavior_path_planner/info/pull_out
+                          Value: false
+                        - Class: rviz_default_plugins/MarkerArray
+                          Enabled: false
+                          Name: Info (DynamicAvoidance)
+                          Namespaces:
+                            {}
+                          Topic:
+                            Depth: 5
+                            Durability Policy: Volatile
+                            History Policy: Keep Last
+                            Reliability Policy: Reliable
+                            Value: /planning/scenario_planning/lane_driving/behavior_planning/behavior_path_planner/info/dynamic_avoidance
                           Value: false
                       Enabled: false
                       Name: InfoMarker
