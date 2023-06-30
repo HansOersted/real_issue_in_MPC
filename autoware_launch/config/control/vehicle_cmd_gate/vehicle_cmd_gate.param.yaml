@@ -2,8 +2,8 @@
   ros__parameters:
     update_rate: 10.0
     system_emergency_heartbeat_timeout: 0.5
-    use_emergency_handling: false
-    use_start_request: false
+    use_emergency_handling: true
+    use_start_request: true
     external_emergency_stop_heartbeat_timeout: 0.0
     stop_hold_acceleration: -1.5
     emergency_acceleration: -2.4
@@ -21,6 +21,6 @@
       vel_lim: 50.0
       lon_acc_lim: 1.0
       lon_jerk_lim: 0.5
-      lat_acc_lim: 2.0
-      lat_jerk_lim: 7.0
+      lat_acc_lim: 1.2
+      lat_jerk_lim: 0.75
       actual_steer_diff_lim: 1.0
