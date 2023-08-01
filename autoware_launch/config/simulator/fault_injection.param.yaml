@@ -1,37 +1,121 @@
 /**:
   ros__parameters:
     event_diag_list:
-      vehicle_is_out_of_lane: "lane_departure"
-      trajectory_deviation_is_high: "trajectory_deviation"
-      localization_matching_score_is_low: "ndt_scan_matcher"
-      localization_accuracy_is_low: "localization_accuracy"
-      map_version_is_different: "map_version"
-      trajectory_is_invalid: "trajectory_point_validation"
-      cpu_temperature_is_high: "CPU Temperature"
-      cpu_usage_is_high: "CPU Usage"
-      cpu_is_in_thermal_throttling: "CPU Thermal Throttling"
-      storage_temperature_is_high: "HDD Temperature"
-      storage_usage_is_high: "HDD Usage"
-      network_usage_is_high: "Network Usage"
-      clock_error_is_large: "NTP Offset"
-      gpu_temperature_is_high: "GPU Temperature"
-      gpu_usage_is_high: "GPU Usage"
-      gpu_memory_usage_is_high: "GPU Memory Usage"
-      gpu_is_in_thermal_throttling: "GPU Thermal Throttling"
-      driving_recorder_storage_error: "driving_recorder"
-      debug_data_logger_storage_error: "bagpacker"
-      emergency_stop_operation: "emergency_stop_operation"
-      vehicle_error_occurred: "vehicle_errors"
-      vehicle_ecu_connection_is_lost: "can_bus_connection"
-      obstacle_crash_sensor_is_activated: "obstacle_crash"
-      /control/command_gate/node_alive_monitoring: "vehicle_cmd_gate: heartbeat"
-      /control/autonomous_driving/node_alive_monitoring: "control_topic_status"
-      /control/external_command_selector/node_alive_monitoring: "external_cmd_selector: heartbeat"
-      /localization/node_alive_monitoring: "localization_topic_status"
-      /map/node_alive_monitoring: "map_topic_status"
-      /planning/node_alive_monitoring: "planning_topic_status"
-      /sensing/lidar/node_alive_monitoring: "lidar_topic_status"
-      /sensing/imu/node_alive_monitoring: "imu_connection"
-      /sensing/gnss/node_alive_monitoring: "gnss_connection"
-      /system/node_alive_monitoring: "system_topic_status"
-      /vehicle/node_alive_monitoring: "vehicle_topic_status"
+      # Hardware
+      # CPU
+      CPU-001: "CPU Temperature"
+      CPU-002: "CPU Usage"
+      # CPU-003: "CPU Load Average"
+      CPU-004: "CPU Thermal Throttling"
+      CPU-005: "CPU Frequency"
+
+      # HDD
+      HDD-001: "HDD Temperature"
+      HDD-002: "HDD Usage"
+      # HDD-003: "HDD Connection"
+      HDD-004: "HDD TotalDataWritten"
+      HDD-005: "HDD PowerOnHours"
+      # HDD-006: "HDD RecoveredError"
+      # HDD-007-1: "HDD ReadDataRate"
+      # HDD-007-2: "HDD WriteDataRate"
+      # HDD-007-3: "HDD ReadIOPS"
+      # HDD-007-4: "HDD WriteIOPS"
+
+      # Memory
+      MEM-001: "Memory Usage"
+      # MEM-002: "Memory ECC"
+
+      # Network
+      NET-001: "Network Usage"
+      NET-002: "Network Traffic"
+      # NET-003: "Network CRC Error"
+      # NET-004: "IP Packet Reassembles Failed"
+
+      # NTP
+      NTP-001: "NTP Offset"
+
+      # Process
+      PRO-001: "Tasks Summary"
+      PRO-002: "High-load"
+      PRO-003: "High-mem"
+
+      # GPU
+      GPU-001: "GPU Temperature"
+      GPU-002: "GPU Usage"
+      GPU-003: "GPU Memory Usage"
+      GPU-004: "GPU Thermal Throttling"
+      # GPU-005: "GPU Frequency"
+
+      # IMU
+      # IMU-001: "yaw_rate_status"
+
+      # GNSS
+      # GNS-001: "septentrio_topic_status"
+      # GNS-002: "gnss"
+
+      # LiDAR
+      VLP-001: "velodyne_connection"
+      VLP-002: "velodyne_temperature"
+      VLP-003: "velodyne_rpm"
+      LVX-001: "livox_connection"
+      LVX-003: "livox_temperature"
+      LVX-004: "livox_internal_voltage"
+      LVX-005: "livox_motor_status"
+      LVX-007: "livox_firmware_status"
+      LVX-009: "livox_service_life"
+      LVX-010: "livox_fan_status"
+      # PNDR-001: "pandar_connection"
+      # PNDR-002: "pandar_temperature"
+      # PNDR-003: "pandar_ptp"
+
+      # Software
+      # Map
+      MAP-001: "map_topic_status"
+
+      # Sensing
+      SENSING-001: "sensing_topic_status"
+
+      # Localization
+      LOCALIZATION-001: "localization_topic_status"
+      LOCALIZATION-003: "ndt_scan_matcher"
+      LOCALIZATION-004: "localization_accuracy"
+      # LOCALIZATION-005: "localization_accuracy_lateral_direction"
+
+      # Perception
+      PERCEPTION-001: "perception_topic_status"
+
+      # Planning
+      PLANNING-001: "planning_topic_status"
+      PLANNING-002: "trajectory_point_validation"
+      PLANNING-003: "trajectory_interval_validation"
+      PLANNING-004: "trajectory_curvature_validation"
+      PLANNING-005: "trajectory_relative_angle_validation"
+      # PLANNING-006: "collision_check"
+
+      # Control
+      CONTROL-001: "control_topic_status"
+      CONTROL-003: "vehicle_cmd_gate: heartbeat"
+      CONTROL-004: "lane_departure"
+      # CONTROL-005: "trajectory_deviation"
+      # CONTROL-007: "remote_control_topic_status"
+      CONTROL-008: "external_cmd_selector: heartbeat"
+      # CONTROL-009: "aeb_emergency_stop"
+
+      # Vehicle
+      VEHICLE-001: "vehicle_topic_status"
+      VEHICLE-003: "can_bus_connection"
+      VEHICLE-005: "obstacle_crash"
+      # VEHICLE-006: "vehicle_heartbeat_errors"
+      VEHICLE-007: "vehicle_errors"
+
+      # System
+      SYSTEM-001: "system_topic_status"
+      SYSTEM-002: "emergency_stop_operation"
+      # SYSTEM-005: "edge_core_internet_connection"
+
+      # Others
+      # OTHERS-002: "blockage_validation"
+      # OTHERS-003: "concat_status"
+      # OTHERS-004: "left_upper: visibility_validation"
+      # OTHERS-008: "temperature_monitor"
+      # OTHERS-009: "emergency_vehicle"
