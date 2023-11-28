@@ -23,18 +23,18 @@
     step_size: 0.1
 
     # The ND voxel grid resolution
-    resolution: 2.0
+    resolution: 1.0
 
     # The number of iterations required to calculate alignment
     max_iterations: 30
 
     # Converged param type
     # 0=TRANSFORM_PROBABILITY, 1=NEAREST_VOXEL_TRANSFORMATION_LIKELIHOOD
-    converged_param_type: 1
+    converged_param_type: 0
 
     # If converged_param_type is 0
     # Threshold for deciding whether to trust the estimation result
-    converged_param_transform_probability: 3.0
+    converged_param_transform_probability: 1.0
 
     # If converged_param_type is 1
     # Threshold for deciding whether to trust the estimation result

@@ -12,13 +12,13 @@
     backward_length_buffer_for_end_of_pull_out: 5.0
     minimum_pull_over_length: 16.0
 
-    refine_goal_search_radius_range: 7.5
+    refine_goal_search_radius_range: 3.0 # Since the X1-RD-vehicle drives indoors, it is necessary to be able to make small turns even near the destination.
 
     # parameters for turn signal decider
-    turn_signal_intersection_search_distance: 30.0
+    turn_signal_intersection_search_distance: 15.0 # This change is due to the X1-RD-vehicle driving very slowly on private property.
     turn_signal_intersection_angle_threshold_deg: 15.0
     turn_signal_minimum_search_distance: 10.0
-    turn_signal_search_time: 3.0
+    turn_signal_search_time: 0.0
     turn_signal_shift_length_threshold: 0.3
     turn_signal_on_swerving: true
 
