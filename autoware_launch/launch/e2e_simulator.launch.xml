@@ -58,6 +58,7 @@
       <arg name="launch_control" value="$(var control)"/>
       <!-- Global parameters -->
       <arg name="use_sim_time" value="true"/>
+      <arg name="use_awsim" value="true"/>
       <!-- Vehicle -->
       <arg name="launch_vehicle_interface" value="$(var launch_vehicle_interface)"/>
       <!-- Map -->

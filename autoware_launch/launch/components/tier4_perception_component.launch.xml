@@ -9,6 +9,10 @@
     description="options: obstacle_pointcloud, occupancy_grid (occupancy_grid_map_method must be laserscan_based_occupancy_grid_map)"
   />
   <arg name="data_path" default="$(env HOME)/autoware_data" description="packages data and artifacts directory path"/>
+  <arg name="use_awsim" default="false" description="launch awsim"/>
+
+  <let name="input/pointcloud" value="/sensing/lidar/top/outlier_filtered/pointcloud" if="$(var use_awsim)"/>
+  <let name="input/pointcloud" value="/sensing/lidar/concatenated/pointcloud" unless="$(var use_awsim)"/>
 
   <include file="$(find-pkg-share tier4_perception_launch)/launch/perception.launch.xml">
     <arg name="mode" value="$(var perception_mode)"/>
@@ -121,7 +125,7 @@
       name="obstacle_segmentation_ground_segmentation_elevation_map_param_path"
       value="$(find-pkg-share autoware_launch)/config/perception/obstacle_segmentation/ground_segmentation/elevation_map_parameters.yaml"
     />
-
+    <arg name="input/pointcloud" value="$(var input/pointcloud)"/>
     <!-- occupancy grid map -->
     <arg name="occupancy_grid_map_param_path" value="$(find-pkg-share autoware_launch)/config/perception/occupancy_grid_map/$(var occupancy_grid_map_method).param.yaml"/>
     <arg name="occupancy_grid_map_updater_param_path" value="$(find-pkg-share autoware_launch)/config/perception/occupancy_grid_map/$(var occupancy_grid_map_updater)_updater.param.yaml"/>
