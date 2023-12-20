@@ -52,7 +52,7 @@ launch:
       default: "false"
   - arg:
       name: launch_blind_spot_module
-      default: "true"
+      default: "false"
   - arg:
       name: launch_detection_area_module
       default: "true"
