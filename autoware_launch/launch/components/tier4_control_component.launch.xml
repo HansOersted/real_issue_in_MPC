@@ -4,11 +4,14 @@
   <arg name="lateral_controller_mode" default="mpc"/>
   <arg name="longitudinal_controller_mode" default="pid"/>
   <arg name="use_individual_control_param" default="false"/>
-  <arg name="enable_autonomous_emergency_braking" default="false"/>
+  <arg name="enable_autonomous_emergency_braking" default="true"/>
   <arg name="enable_predicted_path_checker" default="false"/>
 
   <let name="latlon_controller_param_path_dir" value="$(var vehicle_id)" if="$(var use_individual_control_param)"/>
   <let name="latlon_controller_param_path_dir" value="" unless="$(var use_individual_control_param)"/>
+
+  <!-- Additional arg in X1 -->
+  <arg name="use_start_request" default="true"/>
 
   <include file="$(find-pkg-share tier4_control_launch)/launch/control.launch.py">
     <!-- option -->
